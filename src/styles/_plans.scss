@@ -19,13 +19,25 @@
             padding: 60px 44px 44px;
             max-width: 380px;
             width: 100%;
+            img {
+                width: 100%;
+            }
+                    @media (max-width: 768px) {
+                        padding: 0 82px;
+                        max-width: 300px;
+                        width: 100%;
+        }
             &:nth-child(2){
                 background-image: url(../images/fundo_combo_plus.png);
                 background-repeat: no-repeat;
                 background-size: contain;
+                @media (max-width: 768px) {
+                    background-image: url(../images/fundo_combo_plus.png);
+                    background-position: center;  
             }
             img {
                 height: 83px;
+                width: 100%;
             }
             strong {
                 display: block;
@@ -36,4 +48,5 @@
     p {
         text-align: center;
     }
+}
 }

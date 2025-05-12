@@ -16,13 +16,14 @@
 @font-face {
     font-family: Avenir;
     src: url(../../assets/fonts/Avenir-Bold.woff2);
-    font-weight: 400;
+    font-weight: 700;
 }
 * {
     margin: 0;
     padding: 0;
     font-family: Avenir, sans-serif;
     list-style: none;
+
 }
 
 body{
@@ -34,7 +35,7 @@ body{
     line-height: $fontSize + 10px;
     color: variaveis.$corTextoPrincipal;
 }
-@mixin title ($fontSize:28px){
+@mixin title ($fontSize:40px){
     @include  text($fontSize);
     color: variaveis.$corTextoSecundario;
 }
@@ -69,7 +70,7 @@ body{
     }
 }
 .title {
-    @include title(40px);
+    @include title;
     @media (max-width: 768px) {
         @include title(24px);
     }
@@ -81,6 +82,7 @@ body{
     }
 }
 .button {
+    
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -140,8 +142,8 @@ body{
         &__text-container{
             position: absolute;
             top: 0;
-            height: 100%;
             left: 50%;
+            height: 100%;
             width: calc(50% - 10.6vw);
             display: flex;
             flex-direction: column;

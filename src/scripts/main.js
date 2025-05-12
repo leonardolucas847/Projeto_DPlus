@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', function(){
     const buttons = document.querySelectorAll ('[data-tab-button]');
     const questions = document.querySelectorAll('[data-faq-question]');
+
     const heroSection = document.querySelector ('.hero');
     const alturaHero = heroSection.clientHeight;
+
     window.addEventListener('scroll', function(){
         const posicaoAtual = window.scrollY;
         if (posicaoAtual < alturaHero){
@@ -26,9 +28,6 @@ document.addEventListener('DOMContentLoaded', function(){
     //seção faq
     for (let i = 0 ; i<questions.length; i++) {
         questions[i].addEventListener('click', abreOuFechaResposta);
-    }
-    for (let i = 0 ; i<botaoHeader.length; i++) {
-        botaoHeader[i].addEventListener('scroll', adionar);
     }
 })
 function ocultaElementosDoHeader (){
